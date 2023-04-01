@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.23)
+
+cmake_path(GET CMAKE_CURRENT_SOURCE_DIR FILENAME CMAKE_PROJECT_NAME)
+project("${CMAKE_PROJECT_NAME}")
+
+set(CMAKE_CXX_STANDARD 23)
+
+file(GLOB_RECURSE SRC_FILES src/*.cpp src/*.h)
+add_executable("${CMAKE_PROJECT_NAME}" ${SRC_FILES})
